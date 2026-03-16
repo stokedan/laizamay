@@ -1,0 +1,675 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 18px;
+  padding: 22px 16px 26px;
+  box-sizing: border-box;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.top {
+  text-align: left;
+  padding: 6px 6px 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.title {
+  margin: 12px 0 6px;
+  font-size: 34px;
+  line-height: 1.12;
+}
+
+.subtitle {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 20px;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  max-width: 52ch;
+}
+
+.card {
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(20, 22, 30, 0.72);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(14px);
+  padding: 18px;
+  overflow: hidden;
+}
+
+.progress {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.dot {
+  height: 8px;
+  width: 100%;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.10);
+}
+.dot.active {
+  background: linear-gradient(90deg, rgba(123, 92, 255, 1), rgba(0, 220, 255, 1));
+}
+.dot.done {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.crumbs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 6px 0 16px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: center;
+}
+.crumb {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  text-align: center;
+}
+.sep {
+  opacity: 0.5;
+}
+
+.section {
+  text-align: left;
+}
+
+.sectionSub {
+  margin-top: 14px;
+}
+
+.h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.hint {
+  margin: 0 0 14px;
+  color: rgba(255, 255, 255, 0.70);
+  font-size: 14px;
+}
+
+.hint.small {
+  font-size: 13px;
+}
+.hint.tiny {
+  margin-top: -4px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.grid.cards {
+  gap: 12px;
+}
+
+.productGrid {
+  margin-top: 10px;
+}
+
+.productGrid--socks .productImgWrap {
+  padding: 10px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.productGrid--socks .productImg {
+  object-fit: contain;
+}
+
+.productCard {
+  text-align: left;
+  padding: 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+.productCard:hover {
+  border-color: rgba(150, 180, 255, 0.45);
+  background: rgba(255, 255, 255, 0.08);
+}
+.productCard:active {
+  transform: translateY(1px);
+}
+.productCard.selected {
+  border-color: rgba(0, 220, 255, 0.55);
+  background: rgba(0, 220, 255, 0.12);
+}
+
+.productImgWrap {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.18);
+  aspect-ratio: 4 / 5;
+  margin-bottom: 8px;
+}
+
+.productImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.productName {
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.badge.small {
+  font-size: 11px;
+  padding: 5px 9px;
+  margin-bottom: 10px;
+}
+
+.prose {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+.p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.actions.solo {
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.introPhotoBlock {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.introPhoto {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55);
+  object-fit: cover;
+  display: block;
+}
+
+.introPhotoNote {
+  text-align: center;
+}
+.brandCard {
+  text-align: left;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+.brandCard:hover {
+  border-color: rgba(150, 180, 255, 0.45);
+  background: rgba(255, 255, 255, 0.08);
+}
+.brandCard:active {
+  transform: translateY(1px);
+}
+.brandCard.selected {
+  border-color: rgba(0, 220, 255, 0.55);
+  background: rgba(0, 220, 255, 0.10);
+}
+
+.brandLogo {
+  height: 64px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.brandLogo.contain {
+  padding: 8px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.92);
+}
+.brandImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.brandLogo.contain .brandImg {
+  object-fit: contain;
+}
+.brandTextLogo {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  opacity: 0.92;
+}
+.brandName {
+  font-size: 16px;
+  font-weight: 750;
+  margin-bottom: 4px;
+}
+.brandDesc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.revealGrid {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+.revealItem {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 12px;
+}
+.revealKey {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.78;
+}
+.revealVal {
+  margin-top: 6px;
+  font-size: 16px;
+  font-weight: 750;
+}
+.revealPick {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.revealPickText {
+  min-width: 0;
+}
+.revealThumb,
+.revealThumbPlaceholder {
+  width: 52px;
+  height: 66px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.18);
+  flex: 0 0 auto;
+}
+.revealThumb {
+  object-fit: cover;
+  display: block;
+}
+.revealThumb--contain {
+  object-fit: contain;
+  padding: 6px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.12);
+}
+.revealThumbPlaceholder {
+  background: rgba(255, 255, 255, 0.06);
+}
+.revealSubVal {
+  font-size: 13px;
+  font-weight: 550;
+  opacity: 0.9;
+}
+
+.selectionNote {
+  margin: 4px 0 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+  display: inline-flex;
+  gap: 6px;
+}
+.selectionNoteLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  opacity: 0.8;
+}
+.selectionNoteValue {
+  font-weight: 650;
+}
+
+.option {
+  text-align: left;
+  padding: 14px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+.option:hover {
+  border-color: rgba(150, 180, 255, 0.45);
+  background: rgba(255, 255, 255, 0.08);
+}
+.option:active {
+  transform: translateY(1px);
+}
+.optionTitle {
+  font-size: 16px;
+  font-weight: 650;
+  margin-bottom: 2px;
+}
+.optionSub {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.70);
+}
+
+.pillRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.pill {
+  border-radius: 999px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+}
+.pill.selected {
+  border-color: rgba(0, 220, 255, 0.55);
+  background: rgba(0, 220, 255, 0.12);
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+}
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  text-align: left;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+}
+.row:hover {
+  border-color: rgba(123, 92, 255, 0.55);
+}
+.rowMain {
+  display: grid;
+  gap: 2px;
+}
+.rowTitle {
+  font-weight: 650;
+}
+.rowMeta {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.70);
+}
+.chev {
+  opacity: 0.7;
+  font-size: 18px;
+}
+
+.empty {
+  border-radius: 14px;
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 14px;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.reveal {
+  margin-top: 10px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(180deg, rgba(123, 92, 255, 0.14), rgba(0, 220, 255, 0.10));
+  padding: 16px;
+}
+.revealLabel {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+.revealTitle {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 750;
+}
+.revealMeta {
+  margin-top: 4px;
+  font-size: 13px;
+  opacity: 0.80;
+}
+.linkBtn {
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(0, 0, 0, 0.18);
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+}
+
+.actions {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.btn {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 10px 12px;
+}
+.btn.ghost {
+  opacity: 0.9;
+}
+
+.btn.primary {
+  border-color: rgba(0, 220, 255, 0.45);
+  background: linear-gradient(180deg, rgba(123, 92, 255, 0.28), rgba(0, 220, 255, 0.18));
+  padding: 12px 16px;
+  font-weight: 800;
+}
+
+.footer {
+  padding: 0 6px;
+}
+.fine {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.60);
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(10px);
+  z-index: 50;
+}
+
+.modal {
+  width: min(520px, 100%);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(20, 22, 30, 0.92);
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.6);
+  padding: 14px;
+}
+
+.modalMedia {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.22);
+  aspect-ratio: 4 / 3;
+}
+
+.modalImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.modalText {
+  margin-top: 12px;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.modalText--small {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.modalText.subtle {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.70);
+}
+
+.modalActions {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media (min-width: 520px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .title {
+    font-size: 40px;
+  }
+  .card {
+    padding: 22px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .p {
+    color: rgba(0, 0, 0, 0.76);
+  }
+  .brandDesc {
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .btn.primary {
+    border-color: rgba(0, 140, 255, 0.35);
+    background: linear-gradient(180deg, rgba(123, 92, 255, 0.16), rgba(0, 140, 255, 0.10));
+  }
+  .badge {
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: rgba(255, 255, 255, 0.60);
+    color: rgba(0, 0, 0, 0.70);
+  }
+  .subtitle,
+  .hint,
+  .rowMeta,
+  .crumbs,
+  .fine {
+    color: rgba(0, 0, 0, 0.62);
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
+  }
+  .option,
+  .pill,
+  .row,
+  .crumb {
+    background: rgba(255, 255, 255, 0.70);
+    border: 1px solid rgba(0, 0, 0, 0.10);
+  }
+  .brandCard,
+  .revealItem {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.10);
+  }
+  .brandLogo {
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: rgba(255, 255, 255, 0.85);
+  }
+  .empty {
+    border: 1px dashed rgba(0, 0, 0, 0.18);
+    background: rgba(255, 255, 255, 0.65);
+  }
+  .reveal {
+    border: 1px solid rgba(0, 0, 0, 0.10);
+  }
+  .linkBtn {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.70);
+    color: rgba(0, 0, 0, 0.82);
+  }
+
+  .modal {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .modalText {
+    color: rgba(0, 0, 0, 0.82);
+  }
+  .modalText.subtle {
+    color: rgba(0, 0, 0, 0.62);
+  }
+}
+
